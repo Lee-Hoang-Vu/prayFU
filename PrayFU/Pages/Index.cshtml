@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Miếu Cóc FU";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Miếu FU</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/sakura.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="temple-container">
+        <div class="temple">
+            <img src="~/images/mieucoc.png" alt="Logo Miếu Cóc" class="mieu" style="width: 450px;">
+            <div class="altar">
+                <img src="~/images/cocthan.png" alt="Thần Cóc" class="frog">
+            </div>
+            <h1 style="color:green;font-weight:bolder">PASSED</h1>
+        </div>
+        <div class="form-container">
+            <form id="wishForm">
+                <input type="email" id="email" placeholder="Mail của bạn..." required>
+                <textarea id="wish" placeholder="Mong muốn của bạn..." required></textarea>
+                <button type="submit">
+                    <i class="fa-solid fa-hands-praying"></i> Khấn
+                </button>
+            </form>
+        </div>
+        <audio id="prayMusic" src="~/musics/praymusic.mp3" preload="auto"></audio>
+        <div id="dynamic-text-container"></div>
+
+        <div id="falling-flowers"></div>
+    </div>
+
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/sakura.js" text="text/javascript"></script>
+</body>
+</html>

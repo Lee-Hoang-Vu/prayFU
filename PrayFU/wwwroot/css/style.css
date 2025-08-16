@@ -1,0 +1,131 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffccd5;
+    transition: background-color 2s ease; /* Hiệu ứng mượt mà trong 2 giây */
+}
+
+.temple-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.temple {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.frog {
+    width: 180px;
+}
+.form-container {
+    margin-top: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.hidden {
+    display: none;
+}
+/* Hiệu ứng hoa rơi */
+.petal {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 5s linear infinite;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh)
+    }
+}
+.flying-text {
+    position: absolute;
+    font-size: 24px; /* Kích thước chữ */
+    font-weight: bold;
+    color: #fff; /* Màu chữ trắng */
+    background: linear-gradient(90deg, #ff004d, #ff007f, #ff00a5, #ff1493);
+    -webkit-background-clip: text; /* Hiệu ứng gradient */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 105, 180, 1);
+    animation: fade-glow 3s infinite ease-in-out, move 15s linear infinite; /* Tăng thời gian "move" */
+    pointer-events: none; /* Đảm bảo không gây cản trở các phần tử khác */
+}
+
+/* Hiệu ứng sáng mờ nhẹ nhàng */
+@keyframes fade-glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 105, 180, 1);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 20, 147, 1);
+    }
+}
+
+/* Hiệu ứng bay chậm hơn */
+@keyframes move {
+    0% {
+        top: 10%;
+        left: 10%;
+        transform: translate(-10%, -10%);
+    }
+
+    25% {
+        top: 30%;
+        left: 70%;
+        transform: translate(-70%, -30%);
+    }
+
+    50% {
+        top: 60%;
+        left: 30%;
+        transform: translate(-30%, -60%);
+    }
+
+    75% {
+        top: 80%;
+        left: 80%;
+        transform: translate(-80%, -80%);
+    }
+
+    100% {
+        top: 10%;
+        left: 10%;
+        transform: translate(-10%, -10%);
+    }
+}
+
+
+
+
