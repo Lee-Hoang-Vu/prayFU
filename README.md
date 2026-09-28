@@ -1,3 +1,13 @@
-# prayFU
-For fun hehe
-TRẦN HÀ LINK ======>: **https://prayfu-cmd8gghjhyc7dnfy.southeastasia-01.azurewebsites.net/**
+# Pray FU
+
+Static HTML/CSS/JavaScript version of Pray FU.
+
+## Run locally
+
+Open `index.html` in a browser.
+
+## GitHub Pages
+
+Publish the repository root from the `main` branch using GitHub Pages.
+
+No ASP.NET Core runtime, database, or server is required.
